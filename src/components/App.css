@@ -1,0 +1,44 @@
+.navbarHeader{
+  display: flex;
+  justify-content: space-between;
+  background-color: #010163;
+  height: 60px;
+}
+
+.tituloPrincipal{
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+
+}
+.tituloHeader{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.iconoCarrito{
+  display: flex;
+  align-items: center;
+  height: 60px;
+  font-size: 30px;
+  color: aliceblue;
+}
+.categorias{
+  display: flex;
+  justify-content: space-around;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.botonInicio{
+  padding: 1rem;
+}
+
+.botonCatalogo{
+  padding: 1rem;
+}
+
+.botonContacto{
+  padding: 1rem;
+}
