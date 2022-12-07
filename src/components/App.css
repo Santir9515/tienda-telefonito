@@ -42,3 +42,12 @@
 .botonContacto{
   padding: 1rem;
 }
+
+
+.imgInicio{
+  height: 250px;
+  width: auto;
+  display: flex;
+  
+}
+
