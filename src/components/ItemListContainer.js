@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import customFetch from "../utiles/customFetch";
 import ItemList from './ItemList'
-// import ItemCount from './ItemCount'
+import ItemCount from './ItemCount'
 import { useParams } from "react-router-dom"
 const { productos } = require ("../utiles/productos");
 
@@ -16,14 +16,14 @@ const { productos } = require ("../utiles/productos");
         .catch(err => console.log(err))
         }, [categoryId]);
 
-        // const onAdd = (qty) => {
-        //     alert("Has añadido" + qty + "productos")
-        // }
+         const onAdd = (qty) => {
+             alert("Has añadido" + qty + "productos")
+         }
 
     return (
         <>
         <ItemList datos ={datos}/>
-        {/* <ItemCount stock ={5} initiall ={1} onAdd ={onAdd}/> */}
+        <ItemCount stock ={5} initiall ={1} onAdd ={onAdd}/>
         </>
     )
 }
