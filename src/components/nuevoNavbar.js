@@ -5,9 +5,9 @@ import { Center, Left, Logo, MenuItem, Right, Wrapper } from './styleJs';
 const nuevoNavbar = () => {
     return (
       <>
-       <Wrapper>
+       <Wrapper className='navbarHeader'>
                 <Left>
-                    <Link to='/' style={{textDecoration: "none", color: "white"}}><Logo>Tienda El telefonito</Logo></Link>
+                    <Link to='/' style={{textDecoration: "none", color: "Black"}}><Logo>Tienda El telefonito</Logo></Link>
                 </Left>
                 <Center>
                     <Link to='/category/Motorola' style={{textDecoration: "none", color: "Black"}}><MenuItem>Motorola</MenuItem></Link>
