@@ -211,3 +211,6 @@ export const productos = [
     }
 ]
 
+// module.exports ={
+//     productos,
+// }
