@@ -1,21 +1,25 @@
 import { BsFillCartCheckFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import { Center, Left, Logo, MenuItem, Right, Wrapper } from './styleJs';
 
 const nuevoNavbar = () => {
     return (
       <>
-      <div className="navbarHeader">
-      <div className='tituloPrincipal'>
-        <h1>Tienda el Telefonito</h1>
-      </div>
-      <div className="categorias">
-        <span className='botonInicio'>Inicio</span>
-        <span className='botonCatalogo'>Catalogo</span>
-        <span className='botonContacto'>Contacto</span>
-      </div>
-      <div className="iconoCarrito">
-        <BsFillCartCheckFill />
-      </div>
-      </div>
+       <Wrapper>
+                <Left>
+                    <Link to='/' style={{textDecoration: "none", color: "white"}}><Logo>Tienda El telefonito</Logo></Link>
+                </Left>
+                <Center>
+                    <Link to='/category/Motorola' style={{textDecoration: "none", color: "Black"}}><MenuItem>Motorola</MenuItem></Link>
+                    <Link to='/category/Samsung' style={{textDecoration: "none", color: "Black"}}><MenuItem>Samsung</MenuItem></Link>
+                    <Link to='/category/Accesorios' style={{textDecoration: "none", color: "Black"}}><MenuItem>Accesorios</MenuItem></Link>                    
+                </Center>
+                <Right>
+                    <MenuItem>Registrarse</MenuItem>
+                    <MenuItem>Ingresa</MenuItem>
+                    <BsFillCartCheckFill></BsFillCartCheckFill>
+                </Right>
+            </Wrapper>
       </>
     )
   }

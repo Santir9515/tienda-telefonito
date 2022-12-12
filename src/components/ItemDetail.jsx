@@ -1,5 +1,5 @@
 import ItemCount from './ItemCount';
-import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price } from './styleJs'; 
+import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Price } from './styleJs'; 
  
 const ItemDetail = ({ item }) => {
 
@@ -19,9 +19,7 @@ const ItemDetail = ({ item }) => {
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.name}</Title>
-                        <Desc>{item.description}</Desc>
-                        <Price>$ {item.cost}</Price>
-                        <Desc>{item.stock} unidades en stock</Desc>
+                        <Price>$ {item.Price}</Price>
                     </InfoContainer>
                     <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 </WrapperDetail>
