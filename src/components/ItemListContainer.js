@@ -11,7 +11,10 @@ const { productos } = require ("../utiles/productos");
     const { categoryId } = useParams();
 
     useEffect (() => {
-        customFetch (2000, productos.filter(item => item.id === categoryId))
+        customFetch (2000, productos.filter(item => {
+            if (categoryId === undefined) return item;
+            return item.idCategory === categoryId
+        }))
         .then(response => setDatos (response))
         .catch(err => console.log(err))
         }, [categoryId]);

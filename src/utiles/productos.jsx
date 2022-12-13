@@ -1,6 +1,5 @@
 export const productos = [
     {
-        key: 1,
         id: 1,
         name: "Samsung Galaxy A04 32 GB",
         price: "$129000",
