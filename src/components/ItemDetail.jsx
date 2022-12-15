@@ -1,11 +1,9 @@
+import { Button } from '@mui/material';
 import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Price } from './styleJs'; 
  
 const ItemDetail = ({ item }) => {
 
-    const onAdd = (qty) => {
-        alert("You have selected " + qty + " items.");
-    }
 
     return (
         <>
@@ -15,13 +13,14 @@ const ItemDetail = ({ item }) => {
             <DetailContainer>
                 <WrapperDetail>
                     <ImgContainer>
-                        <ImageDetail src={item.image[0]} />
+                        <ImageDetail src={item.image} />
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.name}</Title>
-                        <Price>$ {item.Price}</Price>
+                        <Price>{item.price}</Price>
+                        <p>    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem nostrum beatae iste voluptatibus debitis modi dolor sequi non nobis hic laborum, consequuntur minus ut quasi officiis recusandae quos ratione tempore.</p>
+                        <Button>Agregar al Carrito</Button>
                     </InfoContainer>
-                    <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
                 </WrapperDetail>
             </DetailContainer>
             : <p>Cargando...</p>

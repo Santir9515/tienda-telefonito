@@ -6,7 +6,7 @@ export const productos = [
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor libero, tincidunt id lacinia auctor, mattis elementum tortor. In eu bibendum magna, ac dignissim justo.",
         image :'https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370895/Samsung-galaxy-a04-32GB_lrrkeq.png'
         ,
-        categoryId: "Samsung",
+        categoryId: "1",
         category: {
             brand: "Samsung",
             id: "Samsung",
@@ -20,7 +20,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370895/Soul_Pets_Parlante_Bluetooth_mno79i.png"
         ],
-        categoryId: "Accesorios",
+        categoryId: "3",
         category: {
             brand: "JBL",
             id: "Accesorios",
@@ -34,7 +34,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung-Galaxy-Tab-S6-Lite-WiFi_xeyqpw.png"
         ],
-        categoryId: "Samsung",
+        categoryId: "1",
         category: {
             brand: "Samsung",
             id: "Samsung",
@@ -48,7 +48,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung_Galaxy_Buds2_Pro_Auriculares_Bluetooth_uhv9il.png"
         ],
-        categoryId: "Accesorios",
+        categoryId: "3",
         category: {
             brand: "Samsung",
             id: "Accesorios",
@@ -62,7 +62,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung_Galaxy_A04_64GB_mzi0j7.png"
         ],
-        categoryId: "Samsung",
+        categoryId: "1",
         category: {
             brand: "Samsung",
             id: "Samsung",
@@ -76,7 +76,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung_Cargador_de_Pared_Fast_MicroUSB_xgvrse.png"
         ],
-        categoryId: "Accesorios",
+        categoryId: "3",
         category: {
             brand: "Samsung",
             id: "Accesorios",
@@ -90,7 +90,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung_Galaxy_A52s_5G_t63ynm.png"
         ],
-        categoryId: "Samsung",
+        categoryId: "1",
         category: {
             brand: "Samsung",
             id: "Samsung",
@@ -104,7 +104,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Samsung_Galaxy_A32_128GB_uefe8u.png"
         ],
-        categoryId: "Samsung",
+        categoryId: "1",
         category: {
             brand: "Samsung",
             id: "Samsung",
@@ -118,7 +118,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/Moto-E40_g8nuv1.png"
         ],
-        categoryId: "Motorola",
+        categoryId: "2",
         category: {
             brand: "Motorola",
             id: "Motorola",
@@ -132,7 +132,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/JBL_Go_2_Parlante_Bluetooth_sxyvb0.png"
         ],
-        categoryId: "Accesorios",
+        categoryId: "3",
         category: {
             brand: "JBL",
             id: "Accesorios",
@@ -146,7 +146,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/Motorola_Edge_20_Pro_Control_Remoto_unxg8x.png"
         ],
-        categoryId: "Motorola",
+        categoryId: "2",
         category: {
             brand: "Motorola",
             id: "Motorola",
@@ -160,7 +160,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370894/Motorola-Edge-30-Fusion-5G-256GB_juj3dj.png"
         ],
-        categoryId: "Motorola",
+        categoryId: "2",
         category: {
             brand: "Motorola",
             id: "Motorola",
@@ -174,7 +174,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/Moto_G60s_cu3qrd.png"
         ],
-        categoryId: "Motorola",
+        categoryId: "2",
         category: {
             brand: "Motorola",
             id: "Motorola",
@@ -188,7 +188,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/Motorola_Edge_30_5G_128GB_x7hcss.png"
         ],
-        categoryId: "Motorola",
+        categoryId: "2",
         category: {
             brand: "Motorola",
             id: "Motorola",
@@ -202,7 +202,7 @@ export const productos = [
         image :[
             "https://res.cloudinary.com/dkgywpwvf/image/upload/v1670370893/Moto_Escape_220_Auriculares_Bluetooth_tp8tmn.png"
         ],
-        categoryId: "Accesorios",
+        categoryId: "3",
         category: {
             brand: "Motorola",
             id: "Accesorios",
@@ -212,4 +212,4 @@ export const productos = [
 
 // module.exports ={
 //     productos,
-// }
+//  }

@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom"
+import { ProductContainer } from "./styleJs"
 
 
 
-const item = (props) => {
+const item = ({id, name, image, price}) => {
     return (
-        <>
-        <div className="bodyInicio">{props.name} {props.precio}
+        <ProductContainer>
+        <div className="bodyInicio">{name} {price}
         <div>
+        <img className="imgInicio" src = {image} alt = ""/>
         <button>Comprar ahora</button>
-        <button>Ver Detalles</button>
-        <img className="imgInicio" src = {props.image} alt = ""/>
+        <button><Link to= {`/item/${id}`} style={{textDecoration: "none", color: "Black"}}>Ver Detalles</Link></button>
         </div>
         </div>
-        </>
+        </ProductContainer>
     )
 }
 

@@ -10,9 +10,9 @@ const nuevoNavbar = () => {
                     <Link to='/' style={{textDecoration: "none", color: "Black"}}><Logo>Tienda El telefonito</Logo></Link>
                 </Left>
                 <Center>
-                    <Link to='/category/Motorola' style={{textDecoration: "none", color: "Black"}}><MenuItem>Motorola</MenuItem></Link>
-                    <Link to='/category/Samsung' style={{textDecoration: "none", color: "Black"}}><MenuItem>Samsung</MenuItem></Link>
-                    <Link to='/category/Accesorios' style={{textDecoration: "none", color: "Black"}}><MenuItem>Accesorios</MenuItem></Link>                    
+                    <Link to='/categorias/2' style={{textDecoration: "none", color: "Black"}}><MenuItem>Motorola</MenuItem></Link>
+                    <Link to='/categorias/1' style={{textDecoration: "none", color: "Black"}}><MenuItem>Samsung</MenuItem></Link>
+                    <Link to='/categorias/3' style={{textDecoration: "none", color: "Black"}}><MenuItem>Accesorios</MenuItem></Link>                    
                 </Center>
                 <Right>
                     <MenuItem>Registrarse</MenuItem>
