@@ -1,5 +1,4 @@
 import { Button } from '@mui/material';
-import ItemCount from './ItemCount';
 import { DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Price } from './styleJs'; 
  
 const ItemDetail = ({ item }) => {
