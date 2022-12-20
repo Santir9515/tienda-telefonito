@@ -7,7 +7,7 @@ const nuevoNavbar = () => {
       <>
        <Wrapper className='navbarHeader'>
                 <Left>
-                    <Link to='/' style={{textDecoration: "none", color: "Black"}}><Logo>Tienda El telefonito</Logo></Link>
+                    <Link to='/' style={{textDecoration: "none", color: "Black"}}><Logo>Tienda El Telefonito</Logo></Link>
                 </Left>
                 <Center>
                     <Link to='/categorias/2' style={{textDecoration: "none", color: "Black"}}><MenuItem>Motorola</MenuItem></Link>

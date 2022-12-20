@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom"
 const { productos } = require ("../utiles/productos");
 
  const ItemListContainer = () => {
-    const [datos, setDatos] = useState([]);
+    const [datos , setDatos] = useState([]);
     const { categoryId } = useParams();
 
     useEffect (() => {
@@ -31,7 +31,7 @@ const { productos } = require ("../utiles/productos");
 
     return (
         <>
-        <ItemList datos ={datos}/>
+        <ItemList items={datos}/>
         <ItemCount stock ={5} initiall ={1} onAdd ={onAdd}/>
         </>
     )
