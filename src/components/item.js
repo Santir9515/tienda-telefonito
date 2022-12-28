@@ -3,13 +3,14 @@ import { ProductContainer } from "./styleJs"
 
 
 
-const item = ({id, name, image, price}) => {
+
+const item = ({id, name, image, price, agregarAlCarrito}) => {
     return (
         <ProductContainer>
         <div className="bodyInicio">{name} {price}
         <div>
         <img className="imgInicio" src = {image} alt = ""/>
-        <button>Comprar ahora</button>
+        <button onClick = {agregarAlCarrito}>Comprar ahora</button>
         <button><Link to= {`/item/${id}`} style={{textDecoration: "none", color: "Black"}}>Ver Detalles</Link></button>
         </div>
         </div>
