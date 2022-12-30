@@ -14,7 +14,7 @@ const Cart = () => {
       <ul>
       {
         cartList.length === 0 
-        ? <p>El carrito esta vacio</p>
+        ? <p>El carrito esta vacío</p>
         : cartList.map( item => <li key = {item.id}>{item.name}</li>)
       }
       </ul>
