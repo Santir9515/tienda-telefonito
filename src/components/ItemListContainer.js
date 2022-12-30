@@ -8,7 +8,7 @@ const { productos } = require ("../utiles/productos");
  const ItemListContainer = () => {
     const [datos , setDatos] = useState([]);
     const { categoryId } = useParams();
-     const agregarAlCarrito = () => {
+    const agregarAlCarrito = () => {
         alert('Agregaste al carrito este producto')
      }
 

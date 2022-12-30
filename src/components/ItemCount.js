@@ -4,7 +4,8 @@ import { ProductAmount, ProductAmountContainer } from './styleJs';
 
 
 
-const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
+
+const ItemCount = ({ stock = 0, initial = 0,  onAdd }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
   }
 
   const decrement = () => {
-    if (count > initial+1) {
+    if (count > initial + 1) {
         setCount (count - 1);
     }
   }
@@ -27,13 +28,13 @@ const ItemCount = ({ stock = 0, initial = 1,  onAdd }) => {
   
     return (
      <ProductAmountContainer>
-            <Button variant='text' onClick={increment}></Button>
+            <Button variant='text' onClick={increment}>+</Button>
             <ProductAmount>{count}</ProductAmount>
-            <Button variant='text' onClick={decrement}></Button>
+            <Button variant='text' onClick={decrement}>-</Button>
             {
               stock && count
-              ? <Button variant='contained' color="primary" onClick={() => onAdd (count)}></Button>
-              : <Button variant='contained' disable>Agregar al Carrito </Button>
+              ? <Button variant='contained' color="primary" onClick={() => onAdd (count)}>Agregar al carrito</Button>
+              : <Button variant='contained' disable>Agregar al carrito</Button>
             }
     </ProductAmountContainer>
   )

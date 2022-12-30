@@ -157,10 +157,13 @@ const Price  = styled.span`
     font-size: 40px;
 `;
 
+const Stock = styled.stock
+
+
 export { 
     Wrapper, Logo, MenuItem, Left, Center, Right, 
     ProductAmountContainer, ProductAmount, 
     ProductsContainer, ProductContainer,
     Circle, Image, Info, Icon,
-    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price
+    DetailContainer, WrapperDetail, ImgContainer, ImageDetail, InfoContainer, Title, Desc, Price, Stock
 }
