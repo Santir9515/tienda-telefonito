@@ -76,3 +76,23 @@
 .bi-cart{
   font-size: 50px;
 }
+
+.imgCarrito{
+  height: 110px;
+  width: 70px;
+}
+
+.liCarrito{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonDelete{
+  height: 35px;
+  width: 70px;
+}
+
+.nombreProducto{
+  padding-right: 1rem;
+}

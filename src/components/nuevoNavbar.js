@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Center, Left, Logo, MenuItem, Right, Wrapper } from './styleJs';
 import CartWidget from "./CartWidget"

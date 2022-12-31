@@ -1,9 +1,13 @@
 import { ShoppingCart  } from "@mui/icons-material";
 import { Badge } from "@mui/material";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
+
 
 const CartWidget = () => {
+    const ctxSuma = useContext(CartContext)
     return (
-        <Badge badgeContent={1} color="secondary">
+        <Badge badgeContent={ctxSuma.prodEnCarrito()} color="primary">
             <ShoppingCart />
         </Badge>
     );
