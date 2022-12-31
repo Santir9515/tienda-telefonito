@@ -1,6 +1,7 @@
-import { BsFillCartCheckFill } from 'react-icons/bs';
+
 import { Link } from 'react-router-dom';
 import { Center, Left, Logo, MenuItem, Right, Wrapper } from './styleJs';
+import CartWidget from "./CartWidget"
 
 const nuevoNavbar = () => {
     return (
@@ -17,7 +18,7 @@ const nuevoNavbar = () => {
                 <Right>
                     <MenuItem>Registrarse</MenuItem>
                     <MenuItem>Ingresa</MenuItem>
-                    <BsFillCartCheckFill></BsFillCartCheckFill>
+                    <MenuItem><CartWidget/></MenuItem>
                 </Right>
             </Wrapper>
       </>

@@ -10,11 +10,11 @@ const ItemDetail = ({ item }) => {
         const [itemCount, setItemCount] = useState(0);
         const { addItemButton} = useContext(CartContext)
         
-        const onAdd = (qty) => {
+        const onAdd = (qty,) => {
             alert("Enviaste " + qty + ` ${item.name} al carrito`);
             setItemCount(qty);
 
-            addItemButton (item);
+            addItemButton (item, qty);
         }
 
 

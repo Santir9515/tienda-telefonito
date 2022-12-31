@@ -4,7 +4,7 @@ import { CartContext } from "./CartContext";
 
 
 const Cart = () => {
-  const { cartList } = useContext(CartContext);
+  const { cartList,eliminarProducto, vaciarCarrito } = useContext(CartContext);
 
   return (
     <>
@@ -15,9 +15,10 @@ const Cart = () => {
       {
         cartList.length === 0 
         ? <p>El carrito esta vacío</p>
-        : cartList.map( item => <li key = {item.id}>{item.name}</li>)
+        : cartList.map( item => <li key = {item.id}>{item.name} - cantidad: {item.qty} - <img src={item.image} alt=""/> <button onClick ={() => eliminarProducto (item.id)}> Eliminar producto</button></li>)
       }
       </ul>
+      <button onClick={() => vaciarCarrito ()}> Vaciar carrito</button>
       </>
   )
 }
