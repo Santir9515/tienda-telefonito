@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import customFetch from "../utiles/customFetch";
+import { collection, getDocs } from "firebase/firestore"; 
 import ItemList from './ItemList'
 import { useParams } from "react-router-dom"
-const { productos } = require ("../utiles/productos");
+import { db } from "../utiles/firebaseconfig";
+
 
  const ItemListContainer = () => {
     const [datos , setDatos] = useState([]);
@@ -12,20 +13,25 @@ const { productos } = require ("../utiles/productos");
         alert('Agregaste al carrito este producto')
      }
 
-    useEffect (() => {
-        if (categoryId) {
-            customFetch (2000, productos.filter(item => item.categoryId === categoryId
-            ))
-            .then(response => setDatos (response))
-            .catch(err => console.log(err))
 
-        } else{
-            customFetch (2000, productos
-                )
-                .then(response => setDatos (response))
-                .catch(err => console.log(err))
+
+    //Component didUpdate
+    useEffect ( () => {
+        const fetchFromFirestore = async() => {
+            const querySnapshot = await getDocs (collection(db, "productos"));
+            querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+    });
         }
-        }, [categoryId]);
+        fetchFromFirestore()
+   }, [categoryId]);
+
+   //Component willUnmount
+   useEffect (() => {
+    return (() => {
+        setDatos([])
+    })
+   },[])
 
     return (
         <>
