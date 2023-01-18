@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs, query, where } from "firebase/firestore"; 
 import ItemList from './ItemList'
 import { useParams } from "react-router-dom"
 import { db } from "../utiles/firebaseconfig";
@@ -18,12 +18,22 @@ import { db } from "../utiles/firebaseconfig";
     //Component didUpdate
     useEffect ( () => {
         const fetchFromFirestore = async() => {
-            const querySnapshot = await getDocs (collection(db, "productos"));
-            querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`);
-    });
+            let q; 
+            if (categoryId) {
+                q = query(collection(db, "productos"), where('categoryId', '==', categoryId))
+            }else {
+                q = query(collection(db, "productos"))
+            }
+            const querySnapshot = await getDocs(q);
+            const productosDeFirestore = querySnapshot.docs.map(item => ({
+                id: item.id,
+                ...item.data()
+            }))
+            return productosDeFirestore
         }
         fetchFromFirestore()
+        .then(result => setDatos(result))
+        .catch(err => console.log(err))
    }, [categoryId]);
 
    //Component willUnmount

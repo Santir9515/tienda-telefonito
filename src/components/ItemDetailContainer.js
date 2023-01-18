@@ -1,8 +1,9 @@
+import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import customFetch from "../utiles/customFetch";
 import ItemDetail from "./ItemDetail"
-const {productos} = require('../utiles/productos')
+import { db } from "../utiles/firebaseconfig";
+
 
 
 function ItemDetailContainer() {
@@ -10,9 +11,24 @@ function ItemDetailContainer() {
     const { idProducto } = useParams (); 
 
     useEffect(() => {
-        customFetch(2000, productos.find(item => item.id === parseInt(idProducto)))
+        const fetch1FromFirestore = async () => {
+            const docRef = doc(db, "productos", idProducto);
+            const docSnap = await getDoc(docRef);
+            
+            if (docSnap.exists()) {
+              return {
+                id: idProducto,
+                ...docSnap.data()
+            }
+              
+            } else {
+              
+            } 
+            fetch1FromFirestore()
             .then(result => setDato(result))
-            .catch(err => console.log(err));
+            .catch(err => console.log(err))
+        }
+        fetch1FromFirestore()
     }, []);
 
     return (
