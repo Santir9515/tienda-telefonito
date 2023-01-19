@@ -31,7 +31,7 @@ const ItemDetail = ({ item }) => {
                     </ImgContainer>
                     <InfoContainer>
                         <Title>{item.name}</Title>
-                        <Price>{item.price}</Price>
+                        <Price>${item.price}</Price>
                         <p className='stock'>{item.stock} unidades</p>
                         <Desc>{item.description}</Desc>
                     </InfoContainer>

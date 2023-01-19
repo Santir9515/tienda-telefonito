@@ -3,6 +3,7 @@ import { useState } from "react";
 
 
 
+
 export const CartContext = createContext();
 
 export const CartContextProvider = ({children}) => {
@@ -28,14 +29,12 @@ export const CartContextProvider = ({children}) => {
     }
 }
     const eliminarProducto = (id) => {
-        const eliminarItem = cartList.filter(item => item.id !== id)
-        setCartList (eliminarItem)
+        let result = cartList.filter(item => item.id !== id);
+        setCartList(result);
     }
 
     const vaciarCarrito = () => {
-        const eliminarTodo = cartList.filter (item => item=== item.id)
-        setCartList (eliminarTodo)
-
+        setCartList ([])
     }
 
     const sumaTotalxprod = (id) => {
@@ -46,13 +45,13 @@ export const CartContextProvider = ({children}) => {
    
 
     const subTotalProd = () => {
-        let totalXProd = cartList.map( item => sumaTotalxprod(item.id))
+        let totalXProd = cartList.map( item => sumaTotalxprod(item.id));
         return totalXProd.reduce((valorAnt, valorAct) => valorAnt + valorAct)
     }
      
 
     const totalProd = () => {
-        return subTotalProd
+        return subTotalProd()
     }
     
     

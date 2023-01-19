@@ -16,17 +16,14 @@ function ItemDetailContainer() {
             const docSnap = await getDoc(docRef);
             
             if (docSnap.exists()) {
-              return {
+              const item = {
                 id: idProducto,
                 ...docSnap.data()
             }
-              
+              setDato(item)
             } else {
               
-            } 
-            fetch1FromFirestore()
-            .then(result => setDato(result))
-            .catch(err => console.log(err))
+            }
         }
         fetch1FromFirestore()
     }, []);
