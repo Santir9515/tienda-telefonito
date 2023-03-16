@@ -8,8 +8,9 @@ const CartWidget = () => {
     const ctxSuma = useContext(CartContext)
     return (
         <Badge badgeContent={ctxSuma.prodEnCarrito()} color="primary">
-            <ShoppingCart />
+            <ShoppingCart /> 
         </Badge>
+        
     );
 }
 

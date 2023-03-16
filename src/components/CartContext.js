@@ -46,7 +46,7 @@ export const CartContextProvider = ({children}) => {
 
     const subTotalProd = () => {
         let totalXProd = cartList.map( item => sumaTotalxprod(item.id));
-        return totalXProd.reduce((valorAnt, valorAct) => valorAnt + valorAct)
+        return totalXProd.reduce((valorAnt, valorAct) => valorAnt + valorAct,0)
     }
      
 

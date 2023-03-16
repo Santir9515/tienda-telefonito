@@ -15,9 +15,7 @@ const nuevoNavbar = () => {
                     <Link to='/categorias/3' style={{textDecoration: "none", color: "Black"}}><MenuItem>Accesorios</MenuItem></Link>                    
                 </Center>
                 <Right>
-                    <MenuItem>Registrarse</MenuItem>
-                    <MenuItem>Ingresa</MenuItem>
-                    <MenuItem><CartWidget/></MenuItem>
+                    <Link to='/carrito'><MenuItem><CartWidget /></MenuItem></Link>
                 </Right>
             </Wrapper>
       </>
